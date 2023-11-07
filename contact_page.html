@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>acifin</title>
+    <style>
+        :root{
+    --black: #1A1A1A;
+    --violet: #8E41D8;
+    --white: #FFFFFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--black); 
+    font-family: 'filsonsoft-heavy' ;
+    color: #FFFFFF;
+}
+p,span{
+    font-size: 2.35vw;
+    letter-spacing: 4.32px;
+}
+.container-contact-pg{
+    /* max-width: 1160px; */
+    width: 90%;
+    margin: 0 auto;
+}
+.content-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 50px;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    /* margin: auto; */
+}
+.content-wrap .left-content{
+    width: 48%;
+}
+.content-wrap .left-content h1{
+    color: var(--white);
+    font-size: 6.05vw;
+    line-height: 7.55vw;
+    font-family: 'filsonsoft-heavy';
+    padding-left: 41px;
+}
+.content-wrap .left-content h2{
+    color: var(--violet);
+    font-family: 'ofl-sorts-mill-goudy';
+    font-size: 16.4vw;
+    line-height: 12.5vw;
+}
+
+.content-wrap .right-content{
+    width: 46%;
+}
+.content-wrap .right-content img{
+    width: 100%;
+    border-radius: 35px;
+    padding-top: 40px;
+}
+.content-wrap .left-content .social-media .email, .whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 86%;
+    padding-left: 35px;
+}
+.email img {
+    width: 7vw;
+}
+.whatsapp img {
+    width: 7vw;
+}
+.social-media {
+    margin: 130px 0px 60px;
+    width: 100%;
+}
+.social-media .email,
+.social-media .whatsapp{
+    text-align: center;
+    margin-bottom: 85px;
+  }
+.social-media .email a, .social-media .whatsapp a {
+    display: flex;
+    width: 25vw;
+    height: 5vw;
+    align-items: center;
+    justify-content: center;
+    background: var(--violet);
+    border-radius: 16px;
+    letter-spacing: 3.67px;
+    font-size: 2.1vw;
+    font-family: 'filsonsoft-heavy';
+}
+.border-line{
+    border: 1px solid var(--violet);
+    opacity: 0.5;
+}
+.contact {
+    letter-spacing: 0;
+    font-size: 11.9vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+}
+/* input common for all start */
+form {
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+}
+form input,textarea{
+    margin-bottom: 50px;
+    padding: 24px;
+    max-width: 100%;
+    font-family: 'filsonsoft-heavy';
+    letter-spacing: 4.23px;
+    background: #1A1A1A;
+    color: var(--white);
+    border: 2px solid var(--violet) ;
+    opacity: 0.5;
+    border-radius: 12px;
+    font-size: 2.5vw;
+    outline: none;
+    box-sizing: border-box;
+    transition: border .12s ease-in-out;
+}
+form input:focus {
+    border: 2px solid var(--violet)  ;
+    opacity: 1;
+}
+form input::placeholder{
+    color: var(--white);
+    /* padding-left: 25px; */
+}
+/* input common for all finish */
+form p{
+    padding-bottom: 35px;
+}
+form span {
+    width: 90%;
+    font-size: 2.35vw;
+}
+form .check {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+form .check input[type="checkbox"] {
+    width: 5.5vw;
+    height: 5.5vw;
+    appearance: none;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+form .check input[type="checkbox"]:checked {
+    /* background-color: #8E41D8; */
+    border-color: #8E41D8;
+}
+form textarea{
+   height: 600px;
+}
+form textarea:focus {
+    border: 2px solid var(--violet)  ;
+    opacity: 1;
+}
+form textarea::placeholder{
+    color: var(--white);
+}
+form .send-it{
+    text-align: right;
+}
+form input[type="submit"]{
+    background: var(--violet);
+    border: 0 ;
+    opacity: 1;
+    /* min-width: 190px; */
+    width: auto;
+    padding-inline: 50px;
+}
+/* Media Query Css */
+@media screen and (max-width: 1500px) {
+    .content-wrap .left-content h1 {
+        padding-left: 20px;
+    }
+    .social-media {
+        margin: 80px 0px 50px;
+    }
+    .social-media .email, .social-media .whatsapp {
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 990px) {
+    .content-wrap .left-content .social-media .email, .whatsapp {
+        padding-left: 20px;
+    }
+    .social-media {
+        margin: 60px 0px 50px;
+    }
+    .social-media .email, .social-media .whatsapp {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .content-wrap {
+        display: none;
+    }
+    .mobile-content-wrap {
+        display: flex !important;
+        width: 100%;
+    }
+    .mobile-content-wrap .content-wrap {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobile-content-wrap .content-wrap .left-content {
+        width: 100%;
+    }
+    .content-wrap .left-content h1 {
+        font-size: 13.05vw;
+        line-height: 16.55vw;
+    }
+    .content-wrap .left-content h2 {
+        font-size: 34vw;
+        line-height: 26vw;
+        margin-bottom: 40px;
+    }
+    .email img {
+        width: 10vw;
+    }
+    .whatsapp img {
+        width: 10vw;
+    }
+    .content-wrap .right-content {
+        width: 100%;
+    }
+    .social-media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column wrap;
+        margin: 30px 0px 10px;
+    }
+    .content-wrap .left-content .social-media .email, .whatsapp {
+        width: 85%;
+    }
+    .social-media .email a, .social-media .whatsapp a {
+        width: 57vw;
+        height: 10vw;
+        font-size: 3vw;
+    }
+    .contact {
+        font-size: 16.5vw;
+        padding-bottom: 24px;
+        padding-top: 20px;
+    }
+    form {
+        display: flex;
+        width: 100%;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    form input, textarea {
+        margin-bottom: 20px;
+        padding: 12px 15px;
+        width: 90%;
+    }
+    form .check {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    form span {
+        width: 86%;
+    }
+    form textarea {
+        height: 180px;
+    }
+    p, span {
+        text-align: left;
+        width: 90%;
+        padding-bottom: 15px;
+    }
+    form .send-it {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 540px) {
+    form input, textarea {
+        font-size: 3.5vw;
+        height: 8.5vw;
+    }
+    form span {
+        width: 82%;
+        font-size: 4vw;
+        padding-bottom: 0px;
+    }
+    form .check input[type="checkbox"] {
+        height: 8.5vw;
+    }
+    p, span {
+        font-size: 5vw;
+    }
+    .content-wrap .left-content .social-media .email, .whatsapp {
+        padding-left: 0px;
+    }
+    .email img {
+        width: 13vw;
+    }
+    .whatsapp img {
+        width: 13vw;
+    }
+    .social-media .email a, .social-media .whatsapp a {
+        height: 11vw;
+        font-size: 4vw;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="container-contact-pg">
+        
+        <div class="content-wrap">
+            <div class="left-content">
+                <h1>start your</h1>
+                <h2>project</h2>
+                <div class="social-media">
+                    <div class="email">
+                        <img src="assets/images/email-logo.png">
+                        <a>EMAIL</a>
+                    </div>
+                    <div class="whatsapp">
+                        <img src="assets/images/whatsaap-logo.png">
+                        <a>WHATSAPP</a>
+                    </div>
+               </div>
+            </div>
+            <div class="right-content">
+                <img src="assets/images/man-phone.png">
+            </div>
+        </div>
+        <div class="mobile-content-wrap" style="display: none;">
+            <div class="content-wrap">
+                <div class="left-content">
+                    <h1>start your</h1>
+                    <h2>project</h2>
+                    <div class="right-content">
+                        <img src="assets/images/man-phone.png">
+                    </div>
+                    <div class="social-media">
+                        <div class="email">
+                            <img src="assets/images/email-logo.png">
+                            <a>EMAIL</a>
+                        </div>
+                        <div class="whatsapp">
+                            <img src="assets/images/whatsaap-logo.png">
+                            <a>WHATSAPP</a>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="border-line"></div>
+    <h1 class="contact">contact us</h1>     
+    <form>
+        <input type="text" placeholder="NAME">
+        <input type="email" placeholder="EMAIL" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+        <p>I AM...</p>
+        <div class="check">
+            <input type="checkbox"><span>AN INFLUENCER</span>
+        </div>
+        <div class="check">
+            <input type="checkbox"><span>A CREATIVE</span>
+        </div>
+        <div class="check">
+            <input type="checkbox"><span>A BRAND</span>
+        </div>
+        <div class="check">
+            <input type="checkbox"><span>OTHER  </span>
+       </div>
+        <input type="text" placeholder="PLEASE SPECIFY">
+        <textarea placeholder="WHATS THE CRAICS?"></textarea>
+        <div class="send-it"><input type="submit" value="SEND IT"></div>
+    </form>                 
+    </div>
+</body>
+</html>     
